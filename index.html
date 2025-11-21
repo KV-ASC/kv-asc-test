@@ -1,0 +1,156 @@
+<!DOCTYPE html><html>
+<head>
+    <title>Students Ke Liye Library</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #e6f0ff;
+        }/* First Page */
+    #landing {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #5aa0ff;
+        position: relative;
+    }
+
+    .wave {
+        width: 100%;
+        height: 180px;
+        background: url('https://i.imgur.com/jx7JgCk.png');
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+    }
+
+    #enterBtn {
+        margin-top: 20px;
+        padding: 14px 30px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        background: #003f87;
+        color: white;
+        cursor: pointer;
+    }
+
+    #contact {
+        position: absolute;
+        bottom: 10px;
+        color: white;
+        font-size: 14px;
+    }
+
+    /* Home Page */
+    #home {
+        display: none;
+        padding: 20px;
+    }
+
+    .book {
+        background: white;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 12px;
+        width: 330px;
+        box-shadow: 0 0 10px #ccc;
+    }
+
+    .book img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .btn {
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        background: #003f87;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+</style>
+
+</head>
+<body><!-- LANDING PAGE -->
+<div id="landing">
+    <h1 style="color:white; font-size: 32px;">Students Ke Liye Library</h1>
+    <p style="color:white; font-size: 18px;">No Ads • No Errors • Clean Experience</p>
+
+    <button id="enterBtn" onclick="enterSite()">View Library</button>
+
+    <div id="contact">
+        Contact Us: GitHub | Gmail: kvascbgr@gmail.com | Location: Victoria Road, Bangalore - 560047
+    </div>
+    <div class="wave"></div>
+</div>
+
+<!-- HOME PAGE -->
+<div id="home">
+    <h2>Available Books</h2>
+
+    <!-- Sam Maneshkaw Book -->
+    <div class="book">
+        <img src="sam_cover.jpg" alt="Sam Maneshkaw Book">
+        <h3>Sam Maneshkaw Special Edition</h3>
+        <p>Publish Date: 2022</p>
+        <p>Written By: Sam Maneshkaw</p>
+        <button class="btn" onclick="check('Sam Maneshkaw book')">Check Availability</button>
+    </div>
+
+    <!-- Harry Potter Book -->
+    <div class="book">
+        <img src="harrypotter.jpg" alt="Harry Potter">
+        <h3>Harry Potter and The Sorcerer's Stone</h3>
+        <p>Publish Date: 1997</p>
+        <p>Written By: J.K. Rowling</p>
+        <button class="btn" onclick="check('Harry Potter and the Sorcerer Stone book')">Check Availability</button>
+    </div>
+
+    <!-- Army Books -->
+    <div class="book">
+        <img src="army1.jpg" alt="Indian Army Book">
+        <h3>Indian Army: The Heroes</h3>
+        <p>Publish Date: 2019</p>
+        <p>Written By: Defence Publications</p>
+        <button class="btn" onclick="check('Indian Army Heroes book')">Check Availability</button>
+    </div>
+
+    <div class="book">
+        <img src="army2.jpg" alt="Special Forces">
+        <h3>Special Forces of India</h3>
+        <p>Publish Date: 2020</p>
+        <p>Written By: Armed Forces Board</p>
+        <button class="btn" onclick="check('Indian Special Forces book')">Check Availability</button>
+    </div>
+
+    <div class="book">
+        <img src="army3.jpg" alt="Warriors of India">
+        <h3>Warriors of India</h3>
+        <p>Publish Date: 2021</p>
+        <p>Written By: National Military Press</p>
+        <button class="btn" onclick="check('Warriors of India book')">Check Availability</button>
+    </div>
+
+</div>
+
+<script>
+    function enterSite() {
+        document.getElementById('landing').style.display = 'none';
+        document.getElementById('home').style.display = 'block';
+    }
+
+    function check(bookname) {
+        window.open("https://www.google.com/search?q=" + bookname + "+shop", "_blank");
+    }
+</script>
+
+</body>
+</html>
